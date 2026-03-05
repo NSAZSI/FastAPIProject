@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+*.pyc
+allure-results/
+fastapi_project.log
+test_report.xml
