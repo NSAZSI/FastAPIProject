@@ -1,0 +1,2 @@
+[32mINFO    [0m httpx:_client.py:1740 HTTP Request: POST http://test/api/v1/users/register "HTTP/1.1 200 OK"
+[32mINFO    [0m httpx:_client.py:1740 HTTP Request: POST http://test/api/v1/users/login "HTTP/1.1 200 OK"

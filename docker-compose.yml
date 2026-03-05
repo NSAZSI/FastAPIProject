@@ -1,0 +1,32 @@
+
+
+services:
+  # 数据库服务
+  db:
+    image: mysql:8.0
+    container_name: todo_mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: todo_db
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # FastAPI 应用服务
+  web:
+    build: .
+    container_name: fastapi_app
+    command: sh -c "sleep 10 && alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8888"
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    environment:
+      - DATABASE_URL=mysql+asyncmy://root:123456@db:3306/todo_db
+    depends_on:
+      - db
+
+volumes:
+  mysql_data:

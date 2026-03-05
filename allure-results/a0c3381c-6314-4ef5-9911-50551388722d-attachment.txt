@@ -1,0 +1,2 @@
+2026-02-26 15:05:25,917 - httpx - INFO - HTTP Request: POST http://test/api/v1/users/login "HTTP/1.1 200 OK"
+2026-02-26 15:05:25,937 - httpx - INFO - HTTP Request: POST http://test/api/v1/todos/ "HTTP/1.1 200 OK"
