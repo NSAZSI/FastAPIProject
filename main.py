@@ -50,3 +50,5 @@ app.include_router(api_router, prefix="/api/v1")
 if __name__ == "__main__":
     # 使用你改好的 9000 端口
     uvicorn.run("main:app", host="127.0.0.1", port=8888, reload=True)
+
+# 2026-03-05: 第一次实弹测试 Webhook 自动触发流水线
